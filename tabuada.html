@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+    <script>
+        function tabuada() {
+            const numero = document.getElementById('campo-numero').value;
+            let tabuada = ""
+            for (let index = 1; index <= 10; index++) {
+                tabuada = tabuada + `${numero}X${index}= ${numero * index}<br>`
+
+            }
+            document.getElementById('numero-tabuada').innerHTML = tabuada
+        }
+    </script>
+
+</head>
+
+<body>
+    <form>
+    <input id="campo-numero" type="number" oninput="tabuada();">
+
+    </form>
+    <div id="numero-tabuada"></div>
+
+
+</body>
+
+</html>

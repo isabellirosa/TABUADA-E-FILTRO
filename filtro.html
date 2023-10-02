@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+    <script>
+        function filtraLista() {
+            const filtro = document.getElementById("filtro").value.toLowerCase()
+            const lis = document.getElementsByTagName("li")
+            for (const li of lis) {
+                if (li.innerText.toLowerCase().includes(filtro)) {
+                    li.style.fontWeight = 'bold';
+                } else {
+                    li.style.fontWeight = 'normal';
+                }
+
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <label for="">Filtro:</label>
+        <input type="text" id="filtro" oninput="filtraLista();">
+    </form>
+    <ul>
+        <li>Isabelli</li>
+        <li>Júlia</li>
+        <li>Ana</li>
+        <li>Rafaela</li>
+        <li>Renara</li>
+        <li>João</li>
+        <li>Henrique</li>
+    </ul>
+
+
+</body>
+
+</html>
